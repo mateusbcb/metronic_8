@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\Apps\RoleManagementController;
 use App\Http\Controllers\Admin\Apps\UserManagementController;
 use App\Http\Controllers\Auth\SocialiteController;
 use App\Http\Controllers\Site\DashboardController;
+use App\Http\Controllers\Site\AccountController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,7 +33,11 @@ Route::middleware(['auth', 'verified'])->group(function () {
         });
     });
 
-
+    Route::prefix('site')->group(function () {
+        Route::name('site_account.')->group(function () {
+            Route::get('/my_profile', [AccountController::class, 'index'])->name('my_profile');
+        });
+    });
 });
 
 Route::get('/error', function () {
