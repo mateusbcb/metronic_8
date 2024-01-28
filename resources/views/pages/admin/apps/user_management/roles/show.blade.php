@@ -5,7 +5,7 @@
     @endsection
 
     @section('breadcrumbs')
-        {{ Breadcrumbs::render('user-management.roles.show', $role) }}
+        {{ Breadcrumbs::render('admin_user_management.roles.show', $role) }}
     @endsection
 
     <!--begin::Content container-->

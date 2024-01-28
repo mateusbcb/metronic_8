@@ -17,37 +17,37 @@ Breadcrumbs::for('dashboard', function (BreadcrumbTrail $trail) {
 });
 
 // Home > Dashboard > User Management
-Breadcrumbs::for('user-management.index', function (BreadcrumbTrail $trail) {
+Breadcrumbs::for('admin_user_management.index', function (BreadcrumbTrail $trail) {
     $trail->parent('dashboard');
-    $trail->push('User Management', route('user-management.users.index'));
+    $trail->push('User Management', route('admin_user_management.users.index'));
 });
 
 // Home > Dashboard > User Management > Users
-Breadcrumbs::for('user-management.users.index', function (BreadcrumbTrail $trail) {
-    $trail->parent('user-management.index');
-    $trail->push('Users', route('user-management.users.index'));
+Breadcrumbs::for('admin_user_management.users.index', function (BreadcrumbTrail $trail) {
+    $trail->parent('admin_user_management.index');
+    $trail->push('Users', route('admin_user_management.users.index'));
 });
 
 // Home > Dashboard > User Management > Users > [User]
-Breadcrumbs::for('user-management.users.show', function (BreadcrumbTrail $trail, User $user) {
-    $trail->parent('user-management.users.index');
-    $trail->push(ucwords($user->name), route('user-management.users.show', $user));
+Breadcrumbs::for('admin_user_management.users.show', function (BreadcrumbTrail $trail, User $user) {
+    $trail->parent('admin_user_management.users.index');
+    $trail->push(ucwords($user->name), route('admin_user_management.users.show', $user));
 });
 
 // Home > Dashboard > User Management > Roles
-Breadcrumbs::for('user-management.roles.index', function (BreadcrumbTrail $trail) {
-    $trail->parent('user-management.index');
-    $trail->push('Roles', route('user-management.roles.index'));
+Breadcrumbs::for('admin_user_management.roles.index', function (BreadcrumbTrail $trail) {
+    $trail->parent('admin_user_management.index');
+    $trail->push('Roles', route('admin_user_management.roles.index'));
 });
 
 // Home > Dashboard > User Management > Roles > [Role]
-Breadcrumbs::for('user-management.roles.show', function (BreadcrumbTrail $trail, Role $role) {
-    $trail->parent('user-management.roles.index');
-    $trail->push(ucwords($role->name), route('user-management.roles.show', $role));
+Breadcrumbs::for('admin_user_management.roles.show', function (BreadcrumbTrail $trail, Role $role) {
+    $trail->parent('admin_user_management.roles.index');
+    $trail->push(ucwords($role->name), route('admin_user_management.roles.show', $role));
 });
 
 // Home > Dashboard > User Management > Permission
-Breadcrumbs::for('user-management.permissions.index', function (BreadcrumbTrail $trail) {
-    $trail->parent('user-management.index');
-    $trail->push('Permissions', route('user-management.permissions.index'));
+Breadcrumbs::for('admin_user_management.permissions.index', function (BreadcrumbTrail $trail) {
+    $trail->parent('admin_user_management.index');
+    $trail->push('Permissions', route('admin_user_management.permissions.index'));
 });

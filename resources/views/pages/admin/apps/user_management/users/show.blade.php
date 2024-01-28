@@ -5,7 +5,7 @@
     @endsection
 
     @section('breadcrumbs')
-        {{ Breadcrumbs::render('user-management.users.show', $user) }}
+        {{ Breadcrumbs::render('admin_user_management.users.show', $user) }}
     @endsection
 
     <!--begin::Layout-->
@@ -2734,28 +2734,28 @@
     <!--end::Layout-->
     <!--begin::Modals-->
     <!--begin::Modal - Update user details-->
-    @include('pages/apps/user-management/users/modals/_update-details')
+    @include('pages/admin/apps/user_management/users/modals/_update-details')
     <!--end::Modal - Update user details-->
     <!--begin::Modal - Add schedule-->
-    @include('pages/apps/user-management/users/modals/_add-schedule')
+    @include('pages/admin/apps/user_management/users/modals/_add-schedule')
     <!--end::Modal - Add schedule-->
     <!--begin::Modal - Add one time password-->
-    @include('pages/apps/user-management/users/modals/_add-one-time-password')
+    @include('pages/admin/apps/user_management/users/modals/_add-one-time-password')
     <!--end::Modal - Add one time password-->
     <!--begin::Modal - Update email-->
-    @include('pages/apps/user-management/users/modals/_update-email')
+    @include('pages/admin/apps/user_management/users/modals/_update-email')
     <!--end::Modal - Update email-->
     <!--begin::Modal - Update password-->
-    @include('pages/apps/user-management/users/modals/_update-password')
+    @include('pages/admin/apps/user_management/users/modals/_update-password')
     <!--end::Modal - Update password-->
     <!--begin::Modal - Update role-->
-    @include('pages/apps/user-management/users/modals/_update-role')
+    @include('pages/admin/apps/user_management/users/modals/_update-role')
     <!--end::Modal - Update role-->
     <!--begin::Modal - Add auth app-->
-    @include('pages/apps/user-management/users/modals/_add-auth-app')
+    @include('pages/admin/apps/user_management/users/modals/_add-auth-app')
     <!--end::Modal - Add auth app-->
     <!--begin::Modal - Add task-->
-    @include('pages/apps/user-management/users/modals/_add-task')
+    @include('pages/admin/apps/user_management/users/modals/_add-task')
     <!--end::Modal - Add task-->
     <!--end::Modals-->
 </x-default-layout>

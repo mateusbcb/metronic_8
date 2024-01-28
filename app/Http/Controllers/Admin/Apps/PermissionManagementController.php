@@ -1,20 +1,19 @@
 <?php
 
-namespace App\Http\Controllers\Apps;
+namespace App\Http\Controllers\Admin\Apps;
 
-use App\DataTables\UsersAssignedRoleDataTable;
+use App\DataTables\PermissionsDataTable;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Spatie\Permission\Models\Role;
 
-class RoleManagementController extends Controller
+class PermissionManagementController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(PermissionsDataTable $dataTable)
     {
-        return view('pages/apps.user-management.roles.list');
+        return $dataTable->render('pages/admin.apps.user_management.permissions.list');
     }
 
     /**
@@ -36,16 +35,15 @@ class RoleManagementController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Role $role, UsersAssignedRoleDataTable $dataTable)
+    public function show(string $id)
     {
-        return $dataTable->with('role', $role)
-            ->render('pages/apps.user-management.roles.show', compact('role'));
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Role $role)
+    public function edit(string $id)
     {
         //
     }
@@ -53,7 +51,7 @@ class RoleManagementController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Role $role)
+    public function update(Request $request, string $id)
     {
         //
     }
@@ -61,7 +59,7 @@ class RoleManagementController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Role $role)
+    public function destroy(string $id)
     {
         //
     }

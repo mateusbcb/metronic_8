@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Apps;
+namespace App\Http\Controllers\Admin\Apps;
 
 use App\DataTables\UsersDataTable;
 use App\Http\Controllers\Controller;
@@ -14,7 +14,7 @@ class UserManagementController extends Controller
      */
     public function index(UsersDataTable $dataTable)
     {
-        return $dataTable->render('pages/apps.user-management.users.list');
+        return $dataTable->render('pages.admin.apps.user_management.users.list');
     }
 
     /**
@@ -38,7 +38,7 @@ class UserManagementController extends Controller
      */
     public function show(User $user)
     {
-        return view('pages/apps.user-management.users.show', compact('user'));
+        return view('pages.admin.apps.user_management.users.show', compact('user'));
     }
 
     /**
